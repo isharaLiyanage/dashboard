@@ -12,14 +12,13 @@ const App = (): JSX.Element => {
   const [childData, setChildData] = useState("");
   const handleChildData = (data: string) => {
     setChildData(data);
-    // Do something with the received data
   };
   console.log(childData);
 
   return (
     <>
       <SideBar onDataReceived={handleChildData} />
-      <div className={childData}>
+      <div className={`${childData} h-screen dark:bg-black `}>
         <TopBar />
         <Routes>
           <Route path="/" element={<Dashboard />} />

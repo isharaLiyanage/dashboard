@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import {
@@ -7,7 +8,9 @@ import {
   AiOutlineUserAdd,
 } from "react-icons/ai";
 function Card() {
-  const percentage = 66;
+  const [number, setNumber] = useState(0);
+
+  const percentage = 50;
 
   return (
     <div>
@@ -19,7 +22,10 @@ function Card() {
             <span className=" text-teal-700">Emails Sent</span>
           </div>
           <div className="  w-10">
-            <CircularProgressbar value={percentage} text={`${percentage}%`} />
+            <CircularProgressbar
+              value={percentage || 0}
+              text={`${percentage}%`}
+            />
           </div>
         </div>
 

@@ -5,7 +5,8 @@ import DarkModeToggle from "../Darkmode";
 function TopBar() {
   return (
     <div>
-      <div className=" flex justify-around bg-slate-200 py-2 dark:bg-black">
+      <div className=" flex justify-around border border-[#1C1C1C1A] bg-slate-100 py-2 dark:bg-black">
+        <p className=" text-[16px]">Dashboard </p>
         <form action="">
           <div className="">
             <input
@@ -13,7 +14,7 @@ function TopBar() {
               name="search"
               id=""
               placeholder="Search"
-              className=" rounded"
+              className=" rounded pl-2"
             />
           </div>
         </form>

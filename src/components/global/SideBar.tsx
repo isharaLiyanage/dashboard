@@ -23,13 +23,11 @@ function SideBar({ onDataReceived }: any) {
     <div className=" relative flex ">
       <div
         className={` ${
-          isOpen
-            ? "fixed  h-screen w-9 bg-slate-200 dark:bg-black "
-            : "fixed left-0 h-screen  w-40 bg-slate-400 dark:bg-black"
-        }`}
+          isOpen ? "  h-screen w-9  " : " left-0 h-screen  w-40  "
+        } fixed transform overflow-hidden border border-[#1C1C1C1A] duration-500 ease-in dark:bg-black`}
       >
         <div className="  ">
-          <div className="flex items-center  justify-evenly dark:text-slate-200">
+          <div className=" flex items-center  justify-evenly dark:text-slate-200">
             <h1 className={isOpen ? "hidden" : "block"}>Admin Panel</h1>
             <div className={isOpen ? "hidden" : "block"}>
               <AiOutlineAlignLeft onClick={toggleSidebar} />
@@ -39,7 +37,7 @@ function SideBar({ onDataReceived }: any) {
           <div className=" ">
             <img src={img} alt="" className=" m-auto mt-6 w-11 rounded-full" />
             <div className={isOpen ? "hidden" : "block"}>
-              <p className=" text-center text-sm font-bold dark:text-white">
+              <p className=" text-center text-sm  dark:text-white">
                 Admin name hear
               </p>
             </div>
